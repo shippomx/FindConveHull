@@ -5,7 +5,7 @@ function[Y_Jose, TotalCnt_Jose, RemainCnt_Jose] = Func_FindBasicEdge_Jose( X )
 TotalCnt_Jose = 0;
 for i = 1 : H
     for j = 1 : W
-        if( ~isnan( X( i, j ) ) )
+        if( X(i, j) ~= 0 )
             TotalCnt_Jose = TotalCnt_Jose + 1;
         end
     end
@@ -16,14 +16,14 @@ Y_Jose = zeros( H, W );
 
 for j = 1 : W
     for i = 1 : H
-        if( ~isnan( X( i, j ) ) )
+        if( X(i, j) ~= 0 )
             Y_Jose( i, j ) = 1;
             break;
         end
     end
 
     for i = H : -1 : 1
-        if( ~isnan( X( i, j ) ) )
+        if( X(i, j) ~= 0 )
             Y_Jose( i, j ) = 1;
             break;
         end

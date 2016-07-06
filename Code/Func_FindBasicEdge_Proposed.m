@@ -8,7 +8,7 @@ TotalCnt_Proposed = 0;
 Y1 = zeros( H, W );
 for i = 1 : H
     for j = 1 : W
-        if( ~isnan( X( i, j ) ) )
+        if( X(i, j) ~= 0 )
             Y1( i, j ) = 1;
             TotalCnt_Proposed = TotalCnt_Proposed + 1;
             break;
@@ -16,7 +16,7 @@ for i = 1 : H
     end
     
     for j = W : -1 : 1
-        if( ~isnan( X( i, j ) ) )
+        if( X(i, j) ~= 0 )
             Y1( i, j ) = 1;
             break;
         end
@@ -26,14 +26,14 @@ end
 Y2 = zeros( H, W );
 for j = 1 : W
     for i = 1 : H
-        if( ~isnan( X( i, j ) ) )
+        if( X(i, j) ~= 0 )
             Y2( i, j ) = 1;
             break;
         end
     end
 
     for i = H : -1 : 1
-        if( ~isnan( X( i, j ) ) )
+        if( X(i, j) ~= 0 )
             Y2( i, j ) = 1;
             break;
         end

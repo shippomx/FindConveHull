@@ -1,13 +1,10 @@
-clc;
-clear;
-close all;
 
 
 %%
-RoughData = load('./Data/Reindeer_Pure.mat'); %, Bull_Pure, Bison_Pure, Camel_Pure, Elephant_African_Pure, Elephant_Asian_Pure, Pig_Pure, Polar_Pure, Reindeer_Pure. 
-Xw = RoughData.X;
+% RoughData = load('./Data/Reindeer_Pure.mat'); %, Bull_Pure, Bison_Pure, Camel_Pure, Elephant_African_Pure, Elephant_Asian_Pure, Pig_Pure, Polar_Pure, Reindeer_Pure. 
+% Xw = RoughData.X;
 % --start the timer.
-tic;
+
 [XLength, XWidth] = size(Xw);
 % figure;
 % axis image;
@@ -177,7 +174,7 @@ end
 X_Cvx(countPos + countNeg + 1, :) = X_Cvx(1, :); % take the first point as the start point and the end point.
 
 %%
-toc;
+
 % ------ Done!
 
 hold on;

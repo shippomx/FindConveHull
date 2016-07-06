@@ -2,7 +2,7 @@ function X = Func_LoadPLY( FileName )
 %% ReadXYZ
 fidin = fopen( FileName, 'rb' );
 
-GridPrecision = 0.01;
+GridPrecision = 0.0005;
 
 if( fidin < 0 )
     return;
@@ -82,5 +82,5 @@ for pos = 1 : PlyLength
 end
 
 
-%X = ProjectionZ';
-X = Pure_array;
+X = ProjectionZ';
+%X = Pure_array;
